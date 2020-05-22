@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<br>
+	<a href="/logout" class="btn btn-outline-warning float-right">Logout</a>
+	<h3> Welcome on board, <span style="color:green"> {{user.username}} </span></h3>
+		<br>
+		<h1 class="text-center"> Products Category </h1>
+		<br>
+			
+	<div class="row" style="position:relative;left:100px;">
+		<div class="col-md-6">
+			<div class="my-card">
+				<h1 class="text-center"><a href="/mobiles" class="my-content"> Smartphones</a>
+			</div>
+			<br>
+		</div>
+		<div class="col-md-6">
+			<div class="my-card">
+				<h1 class="text-center"><a href="/laptops" class="my-content"> Laptops</a>
+			</div>
+			<br>
+		</div>
+	</div>
+	
+	<div class="row" style="position:relative;left:100px;">
+		<div class="col-md-6">
+			<div class="my-card">
+				<h1 class="text-center"><a href="/dslrs" class="my-content"> DSLRs</a>
+			</div>
+			<br>
+		</div>
+		<div class="col-md-6">
+			<div class="my-card">
+				<h1 class="text-center"><a href="#" class="my-content"> Disabled</a>
+			</div>
+			<br>
+		</div>
+	</div>
+{% endblock %}
+
+
+

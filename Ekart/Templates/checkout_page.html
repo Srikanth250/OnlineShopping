@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+	<br>
+	<h1 class="text-center"> Checkout Page </h1>
+	<br>
+	<form>
+	{% csrf_token %}
+		<div class="row">
+			<div class="col">
+				<div class="form-group">
+					<label>User Name</label>
+					<input type="text" class="form-control"  value="{{user.username}}" style="width:60%">
+				</div>
+			</div>
+			
+			<div class="col">
+				<div class="form-group">
+					<label>Product</label>
+					<input type="text" class="form-control"  value="{{prod_name}}" style="width:60%">
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col">
+				<div class="form-group">
+					<label>Email address</label>
+					<input type="email" class="form-control"  value="{{user.email}}" style="width:60%">
+				</div>
+			</div>
+			
+			<div class="col">
+				<div class="form-group">
+					<label>Price</label>
+					<input type="text" class="form-control"  value="{{prod_price}}" style="width:60%">
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="row">
+			<div class="col">
+				<div class="form-group">
+					<label>Mobile</label>
+					<input type="tel" class="form-control"  placeholder="Mobile No" style="width:60%" autofocus>
+				</div>
+			</div>
+			
+			<div class="col">
+				<div class="form-group">
+					<label>Delivery Agent</label>
+					<input type="text" class="form-control"  value="Ekart Logistics Pvt Ltd" style="width:60%">
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label>Address</label>
+			<textarea class="form-control" name="textarea" rows="3" placeholder="Enter Shipping Address" autofocus></textarea>
+		</div>
+		
+		<a href="/products/{{name}}/3/na" class="btn btn-success">Place order</a>
+
+	</form>
+	
+{% endblock %}

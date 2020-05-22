@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block body %}
+	
+	<h1 class="text-center"> {{prod_name}}</h1>
+	<br>
+	<div class="row">
+		<div class="col-sm">
+			<img src="{{image}}" style="width:500px">
+		</div>
+		<div class="col-sm">
+			<p class="text-center blockquote"> Product Description </p>
+			<br>
+			<p> <strong>Description:</strong> {{prod_desc}} </p>
+			<p> <strong>Price:</strong> {{prod_price}} </p>
+			<div class="row">
+				<div class="col-sm">
+					<a href="/products/{{name}}/1/na" class="btn btn-warning">Add To Cart</a>
+				</div>
+				<div class="col-sm">
+					<a href="/products/{{name}}/2/na" class="btn btn-success">Buy Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}

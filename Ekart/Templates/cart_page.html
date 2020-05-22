@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+	<br>
+	<a href="/products/{{name}}/2/na" class="btn btn-warning float-right">Checkout</a>
+	<strong class="text-left"> Cart Total = {{prod_price}} </strong>
+	
+	<h1 class="text-center"> My Cart </h1>
+	<br>
+	<strong style="position:relative;left:50px"> {{prod_name}}</strong>
+	<div class="row">
+		
+		<div class="col-sm">
+			<img src="{{image}}" style="width:200px">
+		</div>
+		
+		<div class="col-sm">
+			<div class="row">
+				<div class="col-sm">
+					<br><br><br><br>
+					<a href="#" class="btn btn-success disabled">+</a>
+				</div>
+				<div class="col-sm">
+					<br><br><br><br>
+					<a href="#" class="btn btn-danger disabled">-</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-sm">
+			<br><br><br><br>
+			<h2> <strong>Price:</strong> <span style="color:blue">{{prod_price}}</span> </h2>
+		</div>
+		
+	</div>
+
+{% endblock %}

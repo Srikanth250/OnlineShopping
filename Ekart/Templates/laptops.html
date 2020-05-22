@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<br>
+	<h3>  Laptop Deals </h3>
+	
+	<div class="row">
+	{% for product in products %}
+		<div class="col-md-4">
+			<div class="card" style="width: 18rem;">
+					<img src="{{product.product_image}}" class="card-img-top" alt="img">
+					<div class="card-body">
+						<h5 class="card-title">{{product.product_name}}</h5>
+						<p class="card-text">{{product.product_small_description}}</p>
+						<a href="/products/{{product.company_name}}/0/laptop" class="btn btn-primary">Know More</a>
+					</div>
+			</div>
+			<br>
+		</div>
+		
+	{% endfor %}
+	</div>	
+{% endblock %}

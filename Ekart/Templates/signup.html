@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<form action="/signup/" method="POST">
+{% csrf_token %}
+	<br>
+	<div class="row">
+		<div class="col">
+				<img src="/static/backdrop1.jpg" style="width:80%">
+		</div>
+		
+		<div class="col">
+				<br><br><br><br><br><br>
+				<h1 class="text-center"> <strong style="color:Red">F</strong><strong style="color:yellow">k</strong></strong><strong style="color:blue">a</strong>r<strong style="color:orange">t</strong></h1>
+				<br>
+				<div class="form-group">
+					<label> Username </label>
+					<input type="text" class="form-control" name="username" placeholder="Enter username" >
+				</div>
+				
+				<div class="form-group">
+					<label> Email </label>
+					<input type="email" class="form-control" name="email" placeholder="Email" >
+				</div>
+				
+				<div class="form-group">
+					<label> Password </label>
+					<input type="password" class="form-control" name="password" placeholder="Password" >
+				</div>
+				
+				<div class="text-center">
+					<button type="submit" class="btn btn-primary">Create Account</button>
+				</div>
+		</div>
+	</div>
+	
+</form>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+	<br>
+	<a href="/logout" class="btn btn-outline-warning float-right">Logout</a>
+	<h3> Thank you <span style="color:blue">{{user.username}}</span>, for placing the order </h3>
+	<br><br>
+	
+	<h3> Your order <strong style="color:green">{{prod_name}}</strong> will be delivered to your address {{addr}} in 5-7 business days by Ekart Logistics Pvt Ltd.</h3>
+	<br><br>
+
+	<h3> Continue Shopping <strong style="color:red">...</strong></h3>
+	<br><br>
+
+	<div class="text-center">
+		<a href="/home" class="btn btn-warning">Home Page</a>
+	</div>
+
+{% endblock %}
